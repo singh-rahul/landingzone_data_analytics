@@ -1,5 +1,5 @@
 landingzone_name = "databricks_networking_spoke"
-level = "level2"
+level            = "level2"
 
 tfstates = {
   caf_foundations = {
@@ -34,14 +34,14 @@ vnets = {
         nsg_key = "azure_bastion_nsg"
       }
       jumpbox = {
-        name              = "jumpbox"
-        cidr              = ["10.200.100.8/29"]
+        name = "jumpbox"
+        cidr = ["10.200.100.8/29"]
       }
       databricks_public = {
         name = "databricks-public"
         cidr = ["10.200.100.64/26"]
         delegation = {
-          name = "databricks"
+          name               = "databricks"
           service_delegation = "Microsoft.Databricks/workspaces"
           actions = [
             "Microsoft.Network/virtualNetworks/subnets/join/action",
@@ -54,7 +54,7 @@ vnets = {
         name = "databricks-private"
         cidr = ["10.200.100.128/26"]
         delegation = {
-          name = "databricks"
+          name               = "databricks"
           service_delegation = "Microsoft.Databricks/workspaces"
           actions = [
             "Microsoft.Network/virtualNetworks/subnets/join/action",

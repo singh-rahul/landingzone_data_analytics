@@ -10,7 +10,7 @@
 # - destroy:
 #   rover -lz /tf/caf/solutions/ -var-file /tf/caf/solutions/examples/data_analytics/200-basic-ml/networking_spoke.tfvars -tfstate 200-basic-ml-networking_spoke.tfstate -a destroy
 
-level = "level2"
+level            = "level2"
 landingzone_name = "dap_networking_spoke"
 
 tfstates = {
